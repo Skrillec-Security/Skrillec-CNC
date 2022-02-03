@@ -26,9 +26,44 @@ namespace Skrillec_Panel
             Skrillec_NET.start_skrillec();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        public void tab_changer(int tab)
         {
-
+            dashboard.Visible = false;
+            cnc_settings.Visible = false;
+            db_manager.Visible = false;
+            logs.Visible = false;
+            lookup.Visible = false;
+            settings.Visible = false;
+            if (tab == 0)
+            {
+                dashboard.Visible = true;
+                label1.Text = "Dashboard";
+            }
+            else if (tab == 1)
+            {
+                cnc_settings.Visible = true;
+                label1.Text = "CNC Settings";
+            }
+            else if (tab == 2)
+            {
+                db_manager.Visible = true;
+                label1.Text = "Users CP";
+            }
+            else if (tab == 4)
+            {
+                logs.Visible = true;
+                label1.Text = "Logs";
+            }
+            else if (tab == 5)
+            {
+                lookup.Visible = true;
+                label1.Text = "Lookup Tools";
+            }
+            else if (tab == 6)
+            {
+                settings.Visible = true;
+                label1.Text = "Settings";
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -41,16 +76,93 @@ namespace Skrillec_Panel
             
         }
 
-        public void tab_changer(int tab)
+        private void label5_Click(object sender, EventArgs e)
         {
-            if(tab == 0) {
-                dashboard.Visible = true;
+            tab_changer(0);
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            tab_changer(1);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            tab_changer(2);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            panel5.BringToFront();
+            if (label8.Text == "●")
+            {
+                label8.Text = "◌";
+                panel5.Visible = true;
+            }
+            else
+            {
+                label8.Text = "●";
+                panel5.Visible = false;
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
+            tab_changer(6);
+        }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+            panel5.BringToFront();
+            if(label8.Text == "●")
+            {
+                label8.Text = "◌";
+                panel5.Visible = true;
+            } else
+            {
+                label8.Text = "●";
+                panel5.Visible = false;
+            }
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+            tab_changer(2);
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+            tab_changer(1);
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+            tab_changer(0);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            tab_changer(6);
+        }
+
+        private void panel14_Click(object sender, EventArgs e)
+        {
+            panel5.BringToFront();
+            if (label8.Text == "●")
+            {
+                label8.Text = "◌";
+                panel5.Visible = true;
+            }
+            else
+            {
+                label8.Text = "●";
+                panel5.Visible = false;
+            }
         }
     }
 }
