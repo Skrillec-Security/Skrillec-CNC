@@ -1,7 +1,6 @@
 C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\bin\Debug\Skrillec Panel.exe.config
 C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\bin\Debug\Skrillec Panel.exe
 C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\bin\Debug\Skrillec Panel.pdb
-C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\obj\Debug\Skrillec Panel.csproj.AssemblyReference.cache
 C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\obj\Debug\Skrillec Panel.csproj.SuggestedBindingRedirects.cache
 C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\obj\Debug\Skrillec_Panel.Form1.resources
 C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\obj\Debug\Skrillec_Panel.Properties.Resources.resources
@@ -9,3 +8,4 @@ C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\obj\Debug\Skrillec Panel.
 C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\obj\Debug\Skrillec Panel.csproj.CoreCompileInputs.cache
 C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\obj\Debug\Skrillec Panel.exe
 C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\obj\Debug\Skrillec Panel.pdb
+C:\Users\V1\source\repos\Skrillec Panel\Skrillec Panel\obj\Debug\Skrillec Panel.csproj.AssemblyReference.cache
