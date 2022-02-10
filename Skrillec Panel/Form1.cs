@@ -228,7 +228,7 @@ namespace Skrillec_Panel
                 server_thread = new Thread(Skrillec_NET.start_skrillec);
                 server_thread.Start();
                 //Skrillec_NET.start_skrillec();
-                label22.Text = "Skrillec server started";
+                label22.Text = "Last Action: Skrillec server started";
             } else
             {
                 label22.Text = "Last Action: Error, Skrillec server is already running!";
