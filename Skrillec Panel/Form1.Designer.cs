@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.Skrillec = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +49,27 @@
             this.tabcontrol = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.logs = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.cnc_settings = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -71,17 +93,6 @@
             this.settings = new System.Windows.Forms.Panel();
             this.db_manager = new System.Windows.Forms.Panel();
             this.lookup = new System.Windows.Forms.Panel();
-            this.logs = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -91,17 +102,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.Skrillec.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.navigation_bar.SuspendLayout();
@@ -111,7 +111,15 @@
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tabcontrol.SuspendLayout();
+            this.logs.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.cnc_settings.SuspendLayout();
+            this.panel29.SuspendLayout();
             this.panel28.SuspendLayout();
             this.dashboard.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -120,18 +128,10 @@
             this.panel16.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.logs.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel29.SuspendLayout();
-            this.panel32.SuspendLayout();
-            this.panel34.SuspendLayout();
             this.SuspendLayout();
             // 
             // Skrillec
@@ -147,6 +147,27 @@
             this.Skrillec.Name = "Skrillec";
             this.Skrillec.Size = new System.Drawing.Size(700, 53);
             this.Skrillec.TabIndex = 0;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.checkBox1.Location = new System.Drawing.Point(530, 32);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(114, 17);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "CNC Logs Listener";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(126, 36);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(86, 13);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "Last Action: N/A";
             // 
             // pictureBox2
             // 
@@ -364,6 +385,171 @@
             this.panel4.Size = new System.Drawing.Size(700, 5);
             this.panel4.TabIndex = 8;
             // 
+            // logs
+            // 
+            this.logs.Controls.Add(this.panel32);
+            this.logs.Controls.Add(this.panel25);
+            this.logs.Controls.Add(this.panel2);
+            this.logs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logs.Location = new System.Drawing.Point(0, 0);
+            this.logs.Name = "logs";
+            this.logs.Size = new System.Drawing.Size(700, 387);
+            this.logs.TabIndex = 7;
+            this.logs.Visible = false;
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel32.Controls.Add(this.panel33);
+            this.panel32.Controls.Add(this.panel34);
+            this.panel32.Controls.Add(this.richTextBox3);
+            this.panel32.Location = new System.Drawing.Point(17, 53);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(667, 131);
+            this.panel32.TabIndex = 6;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel33.Location = new System.Drawing.Point(0, 128);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(667, 3);
+            this.panel33.TabIndex = 2;
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel34.Controls.Add(this.label23);
+            this.panel34.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel34.Location = new System.Drawing.Point(0, 0);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(667, 32);
+            this.panel34.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(302, 9);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(62, 15);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "CNC Logs";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.richTextBox3.Location = new System.Drawing.Point(0, 32);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(667, 96);
+            this.richTextBox3.TabIndex = 3;
+            this.richTextBox3.Text = "Logs....";
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel25.Controls.Add(this.panel26);
+            this.panel25.Controls.Add(this.panel27);
+            this.panel25.Controls.Add(this.richTextBox2);
+            this.panel25.Location = new System.Drawing.Point(361, 190);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(323, 174);
+            this.panel25.TabIndex = 6;
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel26.Location = new System.Drawing.Point(0, 171);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(323, 3);
+            this.panel26.TabIndex = 2;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel27.Controls.Add(this.label20);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel27.Location = new System.Drawing.Point(0, 0);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(323, 32);
+            this.panel27.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(114, 9);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(69, 15);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Attack Logs";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.richTextBox2.Location = new System.Drawing.Point(0, 32);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(323, 139);
+            this.richTextBox2.TabIndex = 3;
+            this.richTextBox2.Text = "Attack Logs....";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel2.Controls.Add(this.panel24);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Location = new System.Drawing.Point(17, 190);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(323, 174);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel24.Location = new System.Drawing.Point(0, 171);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(323, 3);
+            this.panel24.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(323, 32);
+            this.panel1.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(114, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(95, 15);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Command Logs";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.richTextBox1.Location = new System.Drawing.Point(0, 32);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(323, 139);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "Logs....";
+            // 
             // cnc_settings
             // 
             this.cnc_settings.Controls.Add(this.panel29);
@@ -375,6 +561,47 @@
             this.cnc_settings.Size = new System.Drawing.Size(700, 387);
             this.cnc_settings.TabIndex = 7;
             this.cnc_settings.Visible = false;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel29.Controls.Add(this.textBox1);
+            this.panel29.Controls.Add(this.panel30);
+            this.panel29.Controls.Add(this.panel31);
+            this.panel29.Location = new System.Drawing.Point(21, 89);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(109, 24);
+            this.panel29.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBox1.Location = new System.Drawing.Point(2, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(107, 14);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "6483";
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel30.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel30.Location = new System.Drawing.Point(0, 21);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(109, 3);
+            this.panel30.TabIndex = 2;
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel31.Location = new System.Drawing.Point(0, 0);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(109, 3);
+            this.panel31.TabIndex = 1;
             // 
             // label21
             // 
@@ -612,120 +839,6 @@
             this.lookup.TabIndex = 7;
             this.lookup.Visible = false;
             // 
-            // logs
-            // 
-            this.logs.Controls.Add(this.panel32);
-            this.logs.Controls.Add(this.panel25);
-            this.logs.Controls.Add(this.panel2);
-            this.logs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logs.Location = new System.Drawing.Point(0, 0);
-            this.logs.Name = "logs";
-            this.logs.Size = new System.Drawing.Size(700, 387);
-            this.logs.TabIndex = 7;
-            this.logs.Visible = false;
-            // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel25.Controls.Add(this.panel26);
-            this.panel25.Controls.Add(this.panel27);
-            this.panel25.Controls.Add(this.richTextBox2);
-            this.panel25.Location = new System.Drawing.Point(361, 190);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(323, 174);
-            this.panel25.TabIndex = 6;
-            // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel26.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel26.Location = new System.Drawing.Point(0, 171);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(323, 3);
-            this.panel26.TabIndex = 2;
-            // 
-            // panel27
-            // 
-            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel27.Controls.Add(this.label20);
-            this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel27.Location = new System.Drawing.Point(0, 0);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(323, 32);
-            this.panel27.TabIndex = 1;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(114, 9);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(69, 15);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Attack Logs";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.richTextBox2.Location = new System.Drawing.Point(0, 32);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(323, 139);
-            this.richTextBox2.TabIndex = 3;
-            this.richTextBox2.Text = "Attack Logs....";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel2.Controls.Add(this.panel24);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.richTextBox1);
-            this.panel2.Location = new System.Drawing.Point(17, 190);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(323, 174);
-            this.panel2.TabIndex = 5;
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel24.Location = new System.Drawing.Point(0, 171);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(323, 3);
-            this.panel24.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(323, 32);
-            this.panel1.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(114, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Command Logs";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 32);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(323, 139);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "Logs....";
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -743,9 +856,9 @@
             // panel23
             // 
             this.panel23.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel23.Location = new System.Drawing.Point(190, 0);
+            this.panel23.Location = new System.Drawing.Point(183, 0);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(3, 142);
+            this.panel23.Size = new System.Drawing.Size(10, 142);
             this.panel23.TabIndex = 10;
             // 
             // panel22
@@ -753,14 +866,14 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel22.Location = new System.Drawing.Point(0, 0);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(3, 142);
+            this.panel22.Size = new System.Drawing.Size(10, 142);
             this.panel22.TabIndex = 9;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.panel10.Controls.Add(this.label13);
-            this.panel10.Location = new System.Drawing.Point(0, 99);
+            this.panel10.Location = new System.Drawing.Point(0, 96);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(193, 41);
             this.panel10.TabIndex = 8;
@@ -805,7 +918,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.panel6.Controls.Add(this.label11);
-            this.panel6.Location = new System.Drawing.Point(0, 4);
+            this.panel6.Location = new System.Drawing.Point(0, 6);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(193, 41);
             this.panel6.TabIndex = 6;
@@ -824,129 +937,16 @@
             this.label11.Text = "Logs";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(126, 36);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(86, 13);
-            this.label22.TabIndex = 6;
-            this.label22.Text = "Last Action: N/A";
-            // 
-            // panel29
-            // 
-            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel29.Controls.Add(this.textBox1);
-            this.panel29.Controls.Add(this.panel30);
-            this.panel29.Controls.Add(this.panel31);
-            this.panel29.Location = new System.Drawing.Point(21, 89);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(109, 24);
-            this.panel29.TabIndex = 6;
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel30.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel30.Location = new System.Drawing.Point(0, 21);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(109, 3);
-            this.panel30.TabIndex = 2;
-            // 
-            // panel31
-            // 
-            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel31.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel31.Location = new System.Drawing.Point(0, 0);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(109, 3);
-            this.panel31.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBox1.Location = new System.Drawing.Point(2, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(107, 14);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "6483";
-            // 
-            // panel32
-            // 
-            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel32.Controls.Add(this.panel33);
-            this.panel32.Controls.Add(this.panel34);
-            this.panel32.Controls.Add(this.richTextBox3);
-            this.panel32.Location = new System.Drawing.Point(17, 53);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(667, 131);
-            this.panel32.TabIndex = 6;
-            // 
-            // panel33
-            // 
-            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel33.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel33.Location = new System.Drawing.Point(0, 128);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(667, 3);
-            this.panel33.TabIndex = 2;
-            // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel34.Controls.Add(this.label23);
-            this.panel34.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel34.Location = new System.Drawing.Point(0, 0);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(667, 32);
-            this.panel34.TabIndex = 1;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(302, 9);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(62, 15);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "CNC Logs";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.richTextBox3.Location = new System.Drawing.Point(0, 32);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(667, 96);
-            this.richTextBox3.TabIndex = 3;
-            this.richTextBox3.Text = "Logs....";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.checkBox1.Location = new System.Drawing.Point(530, 32);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(114, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "CNC Logs Listener";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(700, 540);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.tabcontrol);
             this.Controls.Add(this.Skrillec);
             this.Controls.Add(this.navigation_bar);
-            this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -967,8 +967,20 @@
             this.panel7.PerformLayout();
             this.tabcontrol.ResumeLayout(false);
             this.tabcontrol.PerformLayout();
+            this.logs.ResumeLayout(false);
+            this.panel32.ResumeLayout(false);
+            this.panel34.ResumeLayout(false);
+            this.panel34.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.cnc_settings.ResumeLayout(false);
             this.cnc_settings.PerformLayout();
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
             this.panel28.ResumeLayout(false);
             this.dashboard.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
@@ -983,13 +995,6 @@
             this.panel12.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            this.logs.ResumeLayout(false);
-            this.panel25.ResumeLayout(false);
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -997,11 +1002,6 @@
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
-            this.panel32.ResumeLayout(false);
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
             this.ResumeLayout(false);
 
         }
