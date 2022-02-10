@@ -9,9 +9,9 @@ using Skrillec_Panel;
 
 class Buffer
 {
-    public static string data;
-    public static string cmd;
-    public static string[] cmd_args;
+    public static string        data;
+    public static string        cmd;
+    public static string[]      cmd_args;
 
     public static void cmd_parser(string cmd)
     {
@@ -28,6 +28,26 @@ class Buffer
             Buffer.cmd_args[Buffer.cmd_args.Length] = (cmd);
         }
     }
+}
+
+class Clients
+{
+    public static int               count = 0;
+    public static TcpClient[]       sockets;
+    public static string[]          users;
+    public static string[]          ip;
+    public static string[]          port;
+
+    public static void add_user(TcpClient s, string u, string i, string p)
+    {
+        Clients.count++;
+        Clients.sockets[Clients.count] = s;
+        Clients.users[Clients.count] = u;
+        Clients.ip[Clients.count] = i;
+        Clients.port[Clients.count] = p;
+    }
+
+    //public static TcpClient find_socket(string Skrillec_NET)
 }
 class Skrillec_NET
 {
@@ -82,26 +102,36 @@ class Skrillec_NET
 
     public static void cmd_handler(TcpClient socket)
     {
-        Byte[] bytes = new Byte[256];
         String data = null;
         data = null;
 
-        NetworkStream stream = socket.GetStream();
-        int i;
-
-        stream.Write(System.Text.Encoding.ASCII.GetBytes(">>> "), 0, ">>> ".Length);
-        while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
+        while(true)
         {
-            data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
+            data = Skrillec_NET.custom_read(socket, ">>> ");
             Skrillec_NET.server_logs += "Received: " + data + "\n";
-
-            if (data == "help" || data == "?")
+            if (data.Length > "\r\n".Length)
             {
-
+                if (data == "help" || data == "?")
+                {
+                    Skrillec_NET.custom_write(socket, "Working");
+                }
             }
-            // Convert Message to byte then send
-            //byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
-            //stream.Write(msg, 0, msg.Length);
         }
+    }
+
+    public static void custom_write(TcpClient socket, string t)
+    {
+        NetworkStream stream = socket.GetStream();
+        stream.Write(System.Text.Encoding.ASCII.GetBytes(t), 0, t.Length);
+    }
+
+    public static string custom_read(TcpClient socket, string t)
+    {
+        Byte[] bytes = new Byte[256];
+        NetworkStream stream = socket.GetStream();
+        stream.Write(System.Text.Encoding.ASCII.GetBytes(t), 0, t.Length);
+        int i;
+        i = stream.Read(bytes, 0, bytes.Length);
+        return System.Text.Encoding.ASCII.GetString(bytes, 0, i);
     }
 }
