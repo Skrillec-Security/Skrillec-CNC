@@ -6,7 +6,23 @@ using System.Text;
 using System.Windows.Forms;
 using Skrillec_Panel;
 
+class PublicListener
+{
+    public static bool new_status;
+    public static string new_message;
 
+    public static void trigger(string m)
+    {
+        PublicListener.new_status = true;
+        PublicListener.new_message = m;
+    }
+
+    public static void reset()
+    {
+        PublicListener.new_status = false;
+        PublicListener.new_message = String.Empty;
+    }
+}
 class Buffer
 {
     public static string        data;
@@ -15,6 +31,7 @@ class Buffer
 
     public static void cmd_parser(string cmd)
     {
+        PublicListener.new_message = cmd;
         if(cmd.Contains(" "))
         {
             Buffer.data = cmd;
@@ -24,8 +41,8 @@ class Buffer
         {
             Buffer.data = cmd;
             Buffer.cmd = cmd;
-            Array.Resize(ref Buffer.cmd_args, (Buffer.cmd_args.Length+1));
-            Buffer.cmd_args[Buffer.cmd_args.Length] = (cmd);
+            Array.Resize(ref Buffer.cmd_args, 1);
+            Buffer.cmd_args[0] = (cmd);
         }
     }
 }
@@ -102,12 +119,12 @@ class Skrillec_NET
 
     public static void cmd_handler(TcpClient socket)
     {
-        String data = null;
-        data = null;
+        string data = null;
 
         while(true)
         {
             data = Skrillec_NET.custom_read(socket, ">>> ");
+            Buffer.cmd_parser(data);
             Skrillec_NET.server_logs += "Received: " + data + "\n";
             if (data.Length > "\r\n".Length)
             {
@@ -116,6 +133,7 @@ class Skrillec_NET
                     Skrillec_NET.custom_write(socket, "Working");
                 }
             }
+            // ima finish rolling my blunt, sec
         }
     }
 
