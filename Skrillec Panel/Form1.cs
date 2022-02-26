@@ -5,11 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Sockets;
 using Skrillec_Panel;
-using System.Threading;
 
 namespace Skrillec_Panel
 {
@@ -28,7 +28,22 @@ namespace Skrillec_Panel
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            logs_thread = new Thread(listen_to_logger);
+            logs_thread.Start();
+        }
 
+        public void listen_to_logger()
+        {
+            while(true)
+            {
+                richTextBox3.Text = "Test";
+                if(PublicListener.new_status)
+                {
+                    richTextBox3.Text += PublicListener.new_message;
+                    PublicListener.reset();
+                }
+                Thread.Sleep(1);
+            }
         }
 
         public void tab_changer(int tab)
