@@ -943,10 +943,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(700, 540);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.tabcontrol);
             this.Controls.Add(this.Skrillec);
             this.Controls.Add(this.navigation_bar);
+            this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
